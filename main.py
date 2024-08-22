@@ -13,10 +13,13 @@ screen.tracer(0)
 
 
 
+
 snake = Snake()
 food = Food()
 score = Scoreboard()
 over = Gameover()
+
+
 
 def complete_reset():
     over.clear()
@@ -53,10 +56,12 @@ def run_game():
         #Detecting collision with wall
         if snake.head.xcor() > 290 or snake.head.xcor() < -290 or snake.head.ycor() < -290 or snake.head.ycor() > 290:
             over.write_on_over()
+            game_is_on = False
 
         #Detecting collision with its tail
         for segment in snake.segments[1:]:
             if snake.head.distance(segment) < 15:
+                game_is_on = False
                 over.write_on_over()
 
 
