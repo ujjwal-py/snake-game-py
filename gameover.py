@@ -1,6 +1,9 @@
 import turtle
 from turtle import Turtle
-from scoreboard import FONT
+
+FONT = ("Tahoma", 16, "normal")
+
+
 
 
 class Gameover(Turtle):
@@ -10,10 +13,10 @@ class Gameover(Turtle):
         self.color("white")
         self.pen()
         self.goto(0,0)
-        self.write_on_over()
+
 
     def write_on_over(self):
-        self.write(arg=f"GAME OVER!\nContinue? (Press y for Yes, n for NO",
+        self.write(arg=f"GAME OVER!\nContinue? (Press y for Yes, n for Exit)",
                    align="center",
                    font=FONT)
 

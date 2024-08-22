@@ -1,6 +1,6 @@
 from turtle import Turtle
 
-FONT = ("Bradley Hand ITC", 18, "bold")
+FONT = ("Lucida Console", 18, "bold")
 with open("highscore.txt") as save_file:
     saved_score = save_file.read()
 
